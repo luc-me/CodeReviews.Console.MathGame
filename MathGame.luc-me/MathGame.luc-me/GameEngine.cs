@@ -55,7 +55,7 @@ internal class GameEngine
                 {
                     Console.WriteLine("Your answer was correct! Type any key for the next cuestion");
                     Console.ReadLine();
-                    return true; //score ++
+                    return true;
                 }
                 else
                 {
@@ -68,7 +68,7 @@ internal class GameEngine
                 {
                     Console.WriteLine("Your answer was correct! Type any key for the next cuestion");
                     Console.ReadLine();
-                    return true; //score ++
+                    return true;
                 }
                 else
                 {
@@ -81,7 +81,7 @@ internal class GameEngine
                 {
                     Console.WriteLine("Your answer was correct! Type any key for the next cuestion");
                     Console.ReadLine();
-                    return true; //score ++
+                    return true;
                 }
                 else
                 {
