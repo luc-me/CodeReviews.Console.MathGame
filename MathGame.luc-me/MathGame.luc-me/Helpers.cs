@@ -8,10 +8,12 @@ internal class Helpers
     internal static List<Game> history = new();
     internal static (int firstNumber, int secondNumber) GetRandomNumbers(Difficulty difficultyLevel)
     {
+        int first;
+        int second;
         int maxNumber = GetDifficultyRange(difficultyLevel);
         Random seed = new();
-        int first = seed.Next(1, maxNumber);
-        int second = seed.Next(1, maxNumber);
+        first = seed.Next(1, maxNumber);
+        second = seed.Next(1, maxNumber);
         return (first, second);
     }
     internal static (int firstNumber, int secondNumber) GetDivisionNumbers(Difficulty difficultyLevel)
@@ -23,7 +25,7 @@ internal class Helpers
             var randomNumbers = GetRandomNumbers(difficultyLevel);
             first = randomNumbers.firstNumber;
             second = randomNumbers.secondNumber;
-        } while ((first % second != 0) || (first == second) || (first == 1) || (second == 1));
+        } while ((first % second != 0) || (first == second) || (first == 1) || (second == 1) || (second==0));
         return (first, second);
     }
 

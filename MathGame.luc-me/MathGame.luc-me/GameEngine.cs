@@ -16,14 +16,10 @@ internal class GameEngine
         for (int i = 0; i < 5; i++)
         {
             var randomNumbers = Helpers.GetRandomNumbers(difficulty);
+
             if (gameType== Models.GameType.Division)
                 randomNumbers = Helpers.GetDivisionNumbers(difficulty);
-            {
-                while (randomNumbers.secondNumber == 0 || randomNumbers.firstNumber % randomNumbers.secondNumber != 0)
-                {
-                    randomNumbers = Helpers.GetRandomNumbers(difficulty);
-                }
-            }
+
             firstNumber = randomNumbers.firstNumber;
             secondNumber = randomNumbers.secondNumber;
             if (random)
