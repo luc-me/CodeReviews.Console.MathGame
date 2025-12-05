@@ -32,7 +32,7 @@ internal class Menu
                         engine.Operation(GameType.Division);
                         break;
                     case 5:
-                        engine.Operation(GameType.Random, true);
+                        engine.Operation(GameType.Random,true);
                         break;
                     case 6:
                         Helpers.GetHistory();

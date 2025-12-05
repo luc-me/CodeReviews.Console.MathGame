@@ -86,7 +86,7 @@ internal class Helpers
             Console.WriteLine("Your answer need to be a valid option. Try again.");
             option = Console.ReadLine();
         }
-        return temp switch
+       Difficulty diff =  temp switch
         {
             1 => Difficulty.easy,
             2 => Difficulty.normal,
@@ -94,6 +94,9 @@ internal class Helpers
             4 => Difficulty.expert,
             _ => Difficulty.easy
         };
+
+        Console.WriteLine($"You have selected {diff} difficulty. Numbers will be between 1 and {GetDifficultyRange(diff)}");
+        return diff;
     }
     internal static void GetHistory()
     {
